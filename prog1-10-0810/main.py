@@ -1,13 +1,15 @@
 import datetime
 
 class Customer:
-    def __init__(self, name, surname, id, email):
+    def __init__(self, name, surname, id, email, balance, percentages):
         self.name = name
         self.surname = surname
         self.id = id
         self.email = email
         self.datetime_created = datetime.datetime.now()
         self.accounts = []
+        self.balance = balance
+        self.percentages = percentages
 
     def status(self):
         print(f"Client: {self.name} {self.surname} ({self.id}) {self.datetime_created}")
@@ -34,6 +36,12 @@ class Customer:
         print(f"😀 Transaction report for customer {self.name} {self.surname}")     
         for account in self.accounts:
             account.print_transactions()
+            
+    def calculate_percentages(self, balance, percentages):
+        for balance in self.balance:
+            percentages in self.balance
+            percentages = balance * 0,5 / 100
+            print(f"Account balance is {balance * 0,5 / 100}")
 
 # KOMANDAS UZDEVUMS 2
 # Izveido Account klases 2 metodes:
